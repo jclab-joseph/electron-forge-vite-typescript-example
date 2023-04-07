@@ -1,0 +1,45 @@
+{
+  "name": "launcher",
+  "productName": "launcher",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "license": "MIT",
+  "main": ".vite/build/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Joseph Lee",
+    "email": "joseph@jc-lab.net"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/core": "^6.1.1",
+    "@electron-forge/core-utils": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "@electron-forge/plugin-vite": "^6.1.1",
+    "@electron-forge/shared-types": "^6.1.1",
+    "@types/node": "^18.15.11",
+    "electron": "^24.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "resolutions": {
+    "@electron-forge/core": "file:./override-libs/electron-forge-core.tgz",
+    "@electron-forge/core-utils": "file:./override-libs/electron-forge-core-utils.tgz",
+    "@electron-forge/plugin-vite": "file:./override-libs/electron-forge-plugin-vite.tgz"
+  },
+  "packageManager": "yarn@3.5.0"
+}

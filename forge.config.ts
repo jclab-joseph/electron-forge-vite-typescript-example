@@ -1,7 +1,15 @@
 import type { ForgeConfig } from '@electron-forge/shared-types';
 
 const config: ForgeConfig = {
-  packagerConfig: {},
+  packagerConfig: {
+    asar: false,
+    ignore(path) {
+      if (path == '' || path.startsWith('/.vite') || path === '/package.json') {
+        return false;
+      }
+      return true;
+    }
+  },
   rebuildConfig: {},
   makers: [
     {
